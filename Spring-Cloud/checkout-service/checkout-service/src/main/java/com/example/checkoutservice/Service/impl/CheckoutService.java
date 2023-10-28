@@ -1,15 +1,18 @@
 package com.example.checkoutservice.Service.impl;
 
+import com.example.checkoutservice.DTO.Product;
 import com.example.checkoutservice.Model.Checkout;
 import com.example.checkoutservice.Service.ICheckoutService;
+import com.example.checkoutservice.Service.IProductService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-public class CheckoutServiceImpl implements ICheckoutService {
+@Service
+public class CheckoutService implements ICheckoutService {
 
     private IProductService productService;
 
-    public CheckoutServiceImpl(IProductService productService) {
+    public CheckoutService(IProductService productService) {
         this.productService = productService;
     }
 
@@ -17,7 +20,7 @@ public class CheckoutServiceImpl implements ICheckoutService {
     @Override
     public Checkout buildCheckout(List<String> productIds) {
         Double total = 0.0;
-        for(String id = productIds) {
+        for(String id : productIds) {
             Product product = productService.getProduct(id);
             total += product.getPrice();
         }

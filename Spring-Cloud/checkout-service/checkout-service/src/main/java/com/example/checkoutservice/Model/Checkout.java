@@ -1,7 +1,7 @@
 package com.example.checkoutservice.Model;
 
 import java.util.List;
-
+//Ultima instancia previa a la compra de productos
 public class Checkout {
     private String id;
     private String url;

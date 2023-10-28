@@ -6,6 +6,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
+//Se crea un cliente por cada servicio que quiera comunicar
 public class CheckoutServiceApplication {
 
 	public static void main(String[] args) {
