@@ -1,7 +1,7 @@
-package com.example.checkoutservice.Controller;
+package com.example.checkoutservice.controller;
 
-import com.example.checkoutservice.Model.Checkout;
-import com.example.checkoutservice.Service.ICheckoutService;
+import com.example.checkoutservice.model.Checkout;
+import com.example.checkoutservice.service.ICheckoutService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package com.example.checkoutservice.Model;
+package com.example.checkoutservice.model;
 
 import java.util.List;
 //Ultima instancia previa a la compra de productos

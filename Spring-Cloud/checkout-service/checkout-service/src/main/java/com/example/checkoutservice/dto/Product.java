@@ -1,15 +1,12 @@
-package com.example.product.service.Model;
+package com.example.checkoutservice.dto;
 
 public class Product {
     private String id;
     private String name;
-    private Double price;
+    private double price;
 
-    public Product(String id, String name, Double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
+    private String instance;
+
 
     public String getId() {
         return id;
@@ -27,11 +24,19 @@ public class Product {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getInstance() {
+        return instance;
+    }
+
+    public void setInstance(String instance) {
+        this.instance = instance;
     }
 }

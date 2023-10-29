@@ -1,6 +1,6 @@
-package com.example.checkoutservice.Service;
+package com.example.checkoutservice.service;
 
-import com.example.checkoutservice.Model.Checkout;
+import com.example.checkoutservice.model.Checkout;
 
 import java.util.List;
 
