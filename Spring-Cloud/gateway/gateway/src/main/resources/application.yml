@@ -1,25 +1,41 @@
-#Configuración
-server:
-  port: 8084
+#Configuraciï¿½n
+#server:
+#  port: 8084
 
-spring:
-  config:
-    import: "optional:configserver:"
-  application:
-    name: gateway-service
-  cloud:
-    gateway:
-      discovery:
-        serviceId: config-service
-        enabled: true
-      routes:
-        - id: checkout-service
-          uri: lb://checkout-service #lb loadbalancer
+#spring:
+# config:
+#   import: "optional:configserver:"
+# application:
+#   name: gateway-service
+# cloud:
+#   gateway:
+#     discovery:
+#       serviceId: config-service
+#       enabled: true
+      #Config rutas
+#     routes:
+         #identificador de la ruta.
+        #No podemos tener dos rutas apuntando al mismo servicio
+#       - id: checkout-service
+          #Podemos utilizar el nombre del servicio por que utilizamos Eureka
+#         uri: lb://checkout-service #lb loadbalancer
                 #http://localhost:8082
-          predicates:
-            - Path=/checkout
+          #Predicates --> Agregamos las condiciones qu ese tienen que dar para que una
+                          #solicitud llegue al servicio
+#         predicates:
+#           - Path=/checkout
+#         filters:
+            #default-filters: --> Para utilizar los filtros en todas las rutas
+            #AddRequestHeader --> agrega un header a la request
+            #AddReesponseHeader --> agrega algo al header en la response
+#           - AddRequestHeader=X-Request-from, gateway
+#           - AddResponseHeader=X-Response-Red, Blue
+#       - id: products-service
+#         uri: lb://products-service
+#         predicates:
+#           - Path=/products
 
-eureka:
-  instance:
-    hostname: localhost
+#eureka:
+# instance:
+#   hostname: localhost
 
