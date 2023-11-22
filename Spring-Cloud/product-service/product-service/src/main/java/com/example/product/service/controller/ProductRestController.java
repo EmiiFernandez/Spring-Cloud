@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value="/products")
 public class ProductRestController {
 
-    @GetMapping Product getProduct(@RequestParam String id) {
+    @GetMapping()
+    public Product getProduct(@RequestParam String id) {
         return new Product(id, "Notebook", 2000.0, "Instance 1");
     }
 }
