@@ -28,7 +28,7 @@ public class ProductService implements IProductService {
     public Product getProduct(String id) {
         log.info("Intentando obtener el producto con ID: " + id);
 
-        return feignProductRepository.getProductById(id, true);
+        return feignProductRepository.getProductById(id, false);
     }
 
     //Método que se ejectuta si CB esta open
