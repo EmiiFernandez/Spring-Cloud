@@ -72,6 +72,9 @@
 	</dependencyManagement>
 
 	<build>
+		<!-- linea para cambiar el nombre del .jar en target -->
+		<finalName>product-service</finalName>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

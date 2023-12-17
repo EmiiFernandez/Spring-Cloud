@@ -46,6 +46,8 @@
 	</dependencyManagement>
 
 	<build>
+		<!-- linea para cambiar el nombre del .jar en target -->
+		<finalName>eureka-server</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

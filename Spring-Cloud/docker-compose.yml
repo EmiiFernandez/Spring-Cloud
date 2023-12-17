@@ -1,0 +1,55 @@
+#Versión que utilizamos
+version: '2.1'
+
+services:
+  eureka-server:
+    build: eureka-server/eureka-server/
+    mem_limit: 512m
+    ports:
+      - 8761:8761
+  config-server:
+    build: config-server/config-server/
+    mem_limit: 512m
+    ports:
+      - 8889:8889
+  gateway:
+    build: gateway/gateway/
+    mem_limit: 512m
+    ports:
+      - 8085:8085
+  checkout-service:
+    build: checkout-service/checkout-service/
+    mem_limit: 512m
+    ports:
+      - 8082:8082
+  payment-service:
+    build: payment-service/payment-service/
+    mem_limit: 512m
+    ports:
+      - 8086:8086
+  notification-service:
+    build: notification-service/notification-service/
+    mem_limit: 512m
+    ports:
+      - 8087:8087
+  product-service:
+    build: product-service/product-service/
+    mem_limit: 512m
+    ports:
+      - 8081:8081
+      - 8084:8084
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.3
+    ports:
+      - 8080:8080
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    command:
+      start-dev

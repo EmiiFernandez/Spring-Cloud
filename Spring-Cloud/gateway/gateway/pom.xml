@@ -86,6 +86,8 @@
 	</dependencyManagement>
 
 	<build>
+		<!-- linea para cambiar el nombre del .jar en target -->
+		<finalName>gateway</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
